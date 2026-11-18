@@ -1,0 +1,398 @@
+[
+    {
+        "id": "charyn",
+        "name": {
+            "en": "Charyn Canyon",
+            "ru": "Чарынский каньон",
+            "kk": "Шарын шатқалы"
+        },
+        "region": {
+            "en": "Almaty Region",
+            "ru": "Алматинская область",
+            "kk": "Алматы облысы"
+        },
+        "category": "canyons",
+        "image": "images/charyn.jpg",
+        "rating": 4.9,
+        "price": 15000,
+        "featured": true,
+        "description": {
+            "en": "Explore impressive red rock formations and the famous Valley of Castles.",
+            "ru": "Исследуйте удивительные красные скалы и знаменитую Долину замков.",
+            "kk": "Ерекше қызыл жартастар мен әйгілі Қамалдар аңғарын зерттеңіз."
+        },
+        "season": {
+            "en": "April - October",
+            "ru": "Апрель - Октябрь",
+            "kk": "Сәуір - Қазан"
+        },
+        "activities": {
+            "en": ["Hiking", "Photography", "Nature tours"],
+            "ru": ["Пешие прогулки", "Фотография", "Экскурсии"],
+            "kk": ["Жаяу серуендеу", "Фотосурет түсіру", "Экскурсиялар"]
+        }
+    },
+    {
+        "id": "kolsai",
+        "name": {
+            "en": "Kolsai Lakes",
+            "ru": "Кольсайские озёра",
+            "kk": "Көлсай көлдері"
+        },
+        "region": {
+            "en": "Almaty Region",
+            "ru": "Алматинская область",
+            "kk": "Алматы облысы"
+        },
+        "category": "lakes",
+        "image": "images/kolsai.jpg",
+        "rating": 4.9,
+        "price": 20000,
+        "featured": true,
+        "description": {
+            "en": "Beautiful mountain lakes surrounded by green forests and the Tian Shan mountains.",
+            "ru": "Красивые горные озёра, окружённые зелёными лесами и горами Тянь-Шаня.",
+            "kk": "Жасыл ормандар мен Тянь-Шань таулары қоршаған әсем тау көлдері."
+        },
+        "season": {
+            "en": "May - September",
+            "ru": "Май - Сентябрь",
+            "kk": "Мамыр - Қыркүйек"
+        },
+        "activities": {
+            "en": ["Hiking", "Horse riding", "Photography"],
+            "ru": ["Пешие прогулки", "Верховая езда", "Фотография"],
+            "kk": ["Жаяу серуендеу", "Атқа міну", "Фотосурет түсіру"]
+        }
+    },
+    {
+        "id": "burabay",
+        "name": {
+            "en": "Burabay",
+            "ru": "Боровое",
+            "kk": "Бурабай"
+        },
+        "region": {
+            "en": "Akmola Region",
+            "ru": "Акмолинская область",
+            "kk": "Ақмола облысы"
+        },
+        "category": "nature",
+        "image": "images/burabay.jpg",
+        "rating": 4.8,
+        "price": 18000,
+        "featured": true,
+        "description": {
+            "en": "A peaceful resort surrounded by beautiful lakes, pine forests and rocky mountains.",
+            "ru": "Живописный курорт, окружённый озёрами, сосновыми лесами и скалистыми горами.",
+            "kk": "Әсем көлдер, қарағайлы ормандар және жартасты таулар қоршаған демалыс орны."
+        },
+        "season": {
+            "en": "June - September",
+            "ru": "Июнь - Сентябрь",
+            "kk": "Маусым - Қыркүйек"
+        },
+        "activities": {
+            "en": ["Cycling", "Hiking", "Boat trips"],
+            "ru": ["Велопрогулки", "Пешие прогулки", "Прогулки на лодке"],
+            "kk": ["Велосипед тебу", "Жаяу серуендеу", "Қайықпен серуендеу"]
+        }
+    },
+    {
+        "id": "kaindy",
+        "name": {
+            "en": "Kaindy Lake",
+            "ru": "Озеро Каинды",
+            "kk": "Қайыңды көлі"
+        },
+        "region": {
+            "en": "Almaty Region",
+            "ru": "Алматинская область",
+            "kk": "Алматы облысы"
+        },
+        "category": "lakes",
+        "image": "images/kaindy.jpg",
+        "rating": 4.8,
+        "price": 17000,
+        "featured": false,
+        "description": {
+            "en": "A unique mountain lake famous for its submerged forest and turquoise water.",
+            "ru": "Уникальное горное озеро, известное затопленным лесом и бирюзовой водой.",
+            "kk": "Су астындағы орманымен және көгілдір суымен танымал ерекше тау көлі."
+        },
+        "season": {
+            "en": "May - September",
+            "ru": "Май - Сентябрь",
+            "kk": "Мамыр - Қыркүйек"
+        },
+        "activities": {
+            "en": ["Hiking", "Photography", "Horse riding"],
+            "ru": ["Пешие прогулки", "Фотография", "Верховая езда"],
+            "kk": ["Жаяу серуендеу", "Фотосурет түсіру", "Атқа міну"]
+        }
+    },
+    {
+        "id": "almaty",
+        "name": {
+            "en": "Almaty",
+            "ru": "Алматы",
+            "kk": "Алматы"
+        },
+        "region": {
+            "en": "Almaty City",
+            "ru": "Город Алматы",
+            "kk": "Алматы қаласы"
+        },
+        "category": "cities",
+        "image": "images/almaty.jpg",
+        "rating": 4.8,
+        "price": 28000,
+        "featured": false,
+        "description": {
+            "en": "A vibrant city with mountain views, cozy cafes, parks and cultural attractions.",
+            "ru": "Яркий город с видом на горы, уютными кафе, парками и культурными достопримечательностями.",
+            "kk": "Тау көріністері, жайлы дәмханалары, саябақтары және мәдени орындары бар әсем қала."
+        },
+        "season": {
+            "en": "All year",
+            "ru": "Круглый год",
+            "kk": "Жыл бойы"
+        },
+        "activities": {
+            "en": ["City tours", "Shopping", "Visiting museums"],
+            "ru": ["Экскурсии по городу", "Шопинг", "Посещение музеев"],
+            "kk": ["Қала бойынша экскурсия", "Сауда жасау", "Мұражайларға бару"]
+        }
+    },
+    {
+        "id": "astana",
+        "name": {
+            "en": "Astana",
+            "ru": "Астана",
+            "kk": "Астана"
+        },
+        "region": {
+            "en": "Astana City",
+            "ru": "Город Астана",
+            "kk": "Астана қаласы"
+        },
+        "category": "cities",
+        "image": "images/astana.jpg",
+        "rating": 4.7,
+        "price": 25000,
+        "featured": false,
+        "description": {
+            "en": "The modern capital of Kazakhstan, known for its futuristic architecture and famous landmarks.",
+            "ru": "Современная столица Казахстана, известная необычной архитектурой и достопримечательностями.",
+            "kk": "Ерекше сәулетімен және көрікті жерлерімен танымал Қазақстанның заманауи астанасы."
+        },
+        "season": {
+            "en": "May - September",
+            "ru": "Май - Сентябрь",
+            "kk": "Мамыр - Қыркүйек"
+        },
+        "activities": {
+            "en": ["Visiting Baiterek", "Museums", "City tours"],
+            "ru": ["Посещение Байтерека", "Музеи", "Экскурсии по городу"],
+            "kk": ["Бәйтерекке бару", "Мұражайлар", "Қала бойынша экскурсия"]
+        }
+    },
+    {
+        "id": "turkistan",
+        "name": {
+            "en": "Turkistan",
+            "ru": "Туркестан",
+            "kk": "Түркістан"
+        },
+        "region": {
+            "en": "Turkistan Region",
+            "ru": "Туркестанская область",
+            "kk": "Түркістан облысы"
+        },
+        "category": "history",
+        "image": "images/turkistan.jpg",
+        "rating": 4.8,
+        "price": 16000,
+        "featured": false,
+        "description": {
+            "en": "An ancient city with rich cultural heritage and the famous Mausoleum of Khoja Ahmed Yasawi.",
+            "ru": "Древний город с богатым культурным наследием и знаменитым мавзолеем Ходжи Ахмеда Ясави.",
+            "kk": "Бай мәдени мұрасы және әйгілі Қожа Ахмет Ясауи кесенесі бар көне қала."
+        },
+        "season": {
+            "en": "March - May, September - October",
+            "ru": "Март - Май, Сентябрь - Октябрь",
+            "kk": "Наурыз - Мамыр, Қыркүйек - Қазан"
+        },
+        "activities": {
+            "en": ["Historical tours", "Visiting museums", "Photography"],
+            "ru": ["Исторические экскурсии", "Посещение музеев", "Фотография"],
+            "kk": ["Тарихи экскурсиялар", "Мұражайларға бару", "Фотосурет түсіру"]
+        }
+    },
+    {
+        "id": "bozzhyra",
+        "name": {
+            "en": "Bozzhyra",
+            "ru": "Бозжыра",
+            "kk": "Бозжыра"
+        },
+        "region": {
+            "en": "Mangystau Region",
+            "ru": "Мангистауская область",
+            "kk": "Маңғыстау облысы"
+        },
+        "category": "canyons",
+        "image": "images/bozzhyra.jpg",
+        "rating": 4.9,
+        "price": 35000,
+        "featured": false,
+        "description": {
+            "en": "A spectacular desert landscape with white cliffs and unusual rock formations.",
+            "ru": "Впечатляющий пустынный пейзаж с белыми скалами и необычными горными образованиями.",
+            "kk": "Ақ жартастар мен ерекше тау бедерлері бар таңғажайып шөлді аймақ."
+        },
+        "season": {
+            "en": "April - May, September - October",
+            "ru": "Апрель - Май, Сентябрь - Октябрь",
+            "kk": "Сәуір - Мамыр, Қыркүйек - Қазан"
+        },
+        "activities": {
+            "en": ["Jeep tours", "Photography", "Guided hiking"],
+            "ru": ["Джип-туры", "Фотография", "Походы с гидом"],
+            "kk": ["Джип турлары", "Фотосурет түсіру", "Гидпен жорықтар"]
+        }
+    },
+    {
+        "id": "altynemel",
+        "name": {
+            "en": "Altyn Emel National Park",
+            "ru": "Национальный парк Алтын-Эмель",
+            "kk": "Алтынемел ұлттық паркі"
+        },
+        "region": {
+            "en": "Jetisu Region",
+            "ru": "Область Жетысу",
+            "kk": "Жетісу облысы"
+        },
+        "category": "nature",
+        "image": "images/altynemel.jpg",
+        "rating": 4.7,
+        "price": 22000,
+        "featured": false,
+        "description": {
+            "en": "A national park featuring colorful mountains, wildlife and the famous Singing Dune.",
+            "ru": "Национальный парк с разноцветными горами, дикими животными и знаменитым Поющим барханом.",
+            "kk": "Түрлі түсті тауларымен, жабайы жануарларымен және әйгілі Айғайқұмымен танымал ұлттық парк."
+        },
+        "season": {
+            "en": "April - October",
+            "ru": "Апрель - Октябрь",
+            "kk": "Сәуір - Қазан"
+        },
+        "activities": {
+            "en": ["Wildlife watching", "Jeep tours", "Hiking"],
+            "ru": ["Наблюдение за животными", "Джип-туры", "Пешие прогулки"],
+            "kk": ["Жануарларды бақылау", "Джип турлары", "Жаяу серуендеу"]
+        }
+    },
+    {
+        "id": "shymbulak",
+        "name": {
+            "en": "Shymbulak",
+            "ru": "Шымбулак",
+            "kk": "Шымбұлақ"
+        },
+        "region": {
+            "en": "Almaty City",
+            "ru": "Город Алматы",
+            "kk": "Алматы қаласы"
+        },
+        "category": "mountains",
+        "image": "images/shymbulak.jpg",
+        "rating": 4.8,
+        "price": 30000,
+        "featured": false,
+        "description": {
+            "en": "A popular mountain resort offering skiing, snowboarding and breathtaking views.",
+            "ru": "Популярный горный курорт для катания на лыжах, сноуборде и наслаждения красивыми видами.",
+            "kk": "Шаңғы, сноуборд тебуге және керемет тау көріністерін тамашалауға арналған танымал курорт."
+        },
+        "season": {
+            "en": "All year",
+            "ru": "Круглый год",
+            "kk": "Жыл бойы"
+        },
+        "activities": {
+            "en": ["Skiing", "Snowboarding", "Cable car rides"],
+            "ru": ["Лыжи", "Сноуборд", "Канатная дорога"],
+            "kk": ["Шаңғы тебу", "Сноуборд тебу", "Аспалы жолмен көтерілу"]
+        }
+    },
+    {
+        "id": "balkhash",
+        "name": {
+            "en": "Lake Balkhash",
+            "ru": "Озеро Балхаш",
+            "kk": "Балқаш көлі"
+        },
+        "region": {
+            "en": "Karaganda Region",
+            "ru": "Карагандинская область",
+            "kk": "Қарағанды облысы"
+        },
+        "category": "lakes",
+        "image": "images/balkhash.jpg",
+        "rating": 4.6,
+        "price": 14000,
+        "featured": false,
+        "description": {
+            "en": "A remarkable lake with fresh water in its western part and salty water in its eastern part.",
+            "ru": "Уникальное озеро с пресной водой в западной части и солёной водой в восточной.",
+            "kk": "Батыс бөлігінде тұщы, ал шығыс бөлігінде тұзды суы бар ерекше көл."
+        },
+        "season": {
+            "en": "June - August",
+            "ru": "Июнь - Август",
+            "kk": "Маусым - Тамыз"
+        },
+        "activities": {
+            "en": ["Swimming", "Fishing", "Beach relaxation"],
+            "ru": ["Купание", "Рыбалка", "Пляжный отдых"],
+            "kk": ["Суға шомылу", "Балық аулау", "Жағажайда демалу"]
+        }
+    },
+    {
+        "id": "tamgaly",
+        "name": {
+            "en": "Tamgaly Petroglyphs",
+            "ru": "Петроглифы Тамгалы",
+            "kk": "Таңбалы петроглифтері"
+        },
+        "region": {
+            "en": "Almaty Region",
+            "ru": "Алматинская область",
+            "kk": "Алматы облысы"
+        },
+        "category": "history",
+        "image": "images/tamgaly.jpg",
+        "rating": 4.6,
+        "price": 10000,
+        "featured": false,
+        "description": {
+            "en": "An ancient archaeological site with thousands of rock carvings and UNESCO World Heritage status.",
+            "ru": "Древний археологический памятник с тысячами наскальных рисунков, включённый в список ЮНЕСКО.",
+            "kk": "Мыңдаған жартас суреттері бар ЮНЕСКО тізіміне енген көне археологиялық ескерткіш."
+        },
+        "season": {
+            "en": "April - October",
+            "ru": "Апрель - Октябрь",
+            "kk": "Сәуір - Қазан"
+        },
+        "activities": {
+            "en": ["Historical tours", "Photography", "Walking tours"],
+            "ru": ["Исторические экскурсии", "Фотография", "Пешие экскурсии"],
+            "kk": ["Тарихи экскурсиялар", "Фотосурет түсіру", "Жаяу экскурсиялар"]
+        }
+    }
+]

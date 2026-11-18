@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plan your personal trip across Kazakhstan.">
+    <title>Qazaq Trails | Trip Planner</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-compass"></i> Qazaq<span>Trails</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" data-i18n="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html" data-i18n="destinations">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="planner.html" aria-current="page" data-i18n="planner">Trip Planner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favorites.html" data-i18n="favorites">Favorites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-i18n="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-i18n="contact">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav-controls d-flex align-items-center gap-3">
+                    <select id="languageSelect" class="form-select language-select" aria-label="Select language">
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                        <option value="kk">KZ</option>
+                    </select>
+
+                    <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle color theme" aria-pressed="false">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="page-hero planner-hero">
+            <div class="container text-center">
+                <span class="hero-label" data-i18n="plannerLabel">
+                    CREATE YOUR ADVENTURE
+                </span>
+
+                <h1 data-i18n="plannerTitle">Plan Your Journey</h1>
+
+                <p data-i18n="plannerDescription">
+                    Choose your destinations, calculate your budget and create your perfect trip across Kazakhstan.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="row g-4">
+
+                    <div class="col-lg-7">
+                        <div class="planner-card">
+
+                            <h2 class="mb-4">
+                                <i class="bi bi-map"></i>
+                                <span data-i18n="tripDetails">Trip Details</span>
+                            </h2>
+
+                            <form id="tripForm" novalidate>
+
+                                <div class="mb-3">
+                                    <label for="tripName" class="form-label" data-i18n="tripName">
+                                        Trip Name
+                                    </label>
+
+                                    <input type="text"
+                                        class="form-control"
+                                        id="tripName"
+                                        placeholder="My Kazakhstan Adventure"
+                                        data-i18n-placeholder="tripNamePlaceholder"
+                                        maxlength="80"
+                                        required>
+
+                                    <div class="invalid-feedback" data-i18n="tripNameError">
+                                        Please enter a trip name.
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col-md-6">
+                                        <label for="startDate" class="form-label" data-i18n="startDate">
+                                            Start Date
+                                        </label>
+
+                                        <input type="date" id="startDate" class="form-control" required>
+
+                                        <div class="invalid-feedback" data-i18n="startDateError">
+                                            Please select a valid start date.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="endDate" class="form-label" data-i18n="endDate">
+                                            End Date
+                                        </label>
+
+                                        <input type="date" id="endDate" class="form-control" required>
+
+                                        <div class="invalid-feedback" data-i18n="endDateError">
+                                            Please select a valid end date.
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col-md-6">
+                                        <label for="travelers" class="form-label" data-i18n="travelers">
+                                            Number of Travelers
+                                        </label>
+
+                                        <input type="number"
+                                            id="travelers"
+                                            class="form-control"
+                                            min="1"
+                                            max="20"
+                                            step="1"
+                                            value="1"
+                                            required>
+
+                                        <div class="invalid-feedback" data-i18n="travelersError">
+                                            Enter a number between 1 and 20.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="transport" class="form-label" data-i18n="transport">
+                                            Transportation
+                                        </label>
+
+                                        <select id="transport" class="form-select">
+                                            <option value="car" data-i18n="car">Car</option>
+                                            <option value="bus" data-i18n="bus">Bus</option>
+                                            <option value="train" data-i18n="train">Train</option>
+                                            <option value="plane" data-i18n="plane">Plane</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="accommodation" class="form-label" data-i18n="accommodation">
+                                        Accommodation
+                                    </label>
+
+                                    <select id="accommodation" class="form-select">
+                                        <option value="budget" data-i18n="budgetHotel">Budget / Hostel</option>
+                                        <option value="standard" data-i18n="standardHotel">Standard Hotel</option>
+                                        <option value="luxury" data-i18n="luxuryHotel">Luxury Hotel</option>
+                                        <option value="camping" data-i18n="camping">Camping</option>
+                                    </select>
+                                </div>
+
+                                <hr>
+
+                                <h4 class="mb-3" data-i18n="chooseDestinations">
+                                    Choose Your Destinations
+                                </h4>
+
+                                <div class="input-group mb-3">
+
+                                    <select id="destinationSelect" class="form-select" aria-label="Select destination">
+                                        <option value="" data-i18n="selectDestination">
+                                            Select a destination
+                                        </option>
+                                    </select>
+
+                                    <button id="addDestination" type="button" class="btn btn-primary-custom">
+                                        <i class="bi bi-plus-lg"></i>
+                                        <span data-i18n="add">Add</span>
+                                    </button>
+
+                                </div>
+
+                                <p class="text-muted small" data-i18n="dragHint">
+                                    Drag and drop destinations to arrange your route.
+                                </p>
+
+                                <div id="selectedDestinations" class="selected-destinations"></div>
+
+                                <div id="emptyRoute" class="empty-route text-center py-4">
+                                    <i class="bi bi-geo-alt fs-1"></i>
+
+                                    <p data-i18n="emptyRouteText">
+                                        No destinations added yet.
+                                    </p>
+                                </div>
+
+                                <div class="d-flex flex-wrap gap-2 mt-4">
+
+                                    <button type="submit" class="btn btn-primary-custom">
+                                        <i class="bi bi-floppy"></i>
+                                        <span data-i18n="saveTrip">Save Trip</span>
+                                    </button>
+
+                                    <button type="button" id="resetTrip" class="btn btn-outline-secondary">
+                                        <i class="bi bi-arrow-clockwise"></i>
+                                        <span data-i18n="reset">Reset</span>
+                                    </button>
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="budget-card">
+
+                            <h2 class="mb-4">
+                                <i class="bi bi-calculator"></i>
+                                <span data-i18n="budgetTitle">Budget Calculator</span>
+                            </h2>
+
+                            <div class="budget-summary">
+
+                                <div class="budget-row">
+                                    <span data-i18n="tripDuration">Trip Duration</span>
+                                    <strong>
+                                        <span id="totalDays">0</span>
+                                        <span data-i18n="days">days</span>
+                                    </strong>
+                                </div>
+
+                                <div class="budget-row">
+                                    <span data-i18n="travelers">Number of Travelers</span>
+                                    <strong id="totalTravelers">1</strong>
+                                </div>
+
+                                <div class="budget-row">
+                                    <span data-i18n="destinations">Destinations</span>
+                                    <strong id="totalDestinations">0</strong>
+                                </div>
+
+                                <hr>
+
+                                <div class="budget-row">
+                                    <span>
+                                        <i class="bi bi-car-front"></i>
+                                        <span data-i18n="transport">Transportation</span>
+                                    </span>
+
+                                    <strong id="transportCost">0 ₸</strong>
+                                </div>
+
+                                <div class="budget-row">
+                                    <span>
+                                        <i class="bi bi-house-door"></i>
+                                        <span data-i18n="accommodation">Accommodation</span>
+                                    </span>
+
+                                    <strong id="accommodationCost">0 ₸</strong>
+                                </div>
+
+                                <div class="budget-row">
+                                    <span>
+                                        <i class="bi bi-cup-hot"></i>
+                                        <span data-i18n="food">Food</span>
+                                    </span>
+
+                                    <strong id="foodCost">0 ₸</strong>
+                                </div>
+
+                                <div class="budget-row">
+                                    <span>
+                                        <i class="bi bi-ticket-perforated"></i>
+                                        <span data-i18n="activities">Activities</span>
+                                    </span>
+
+                                    <strong id="activitiesCost">0 ₸</strong>
+                                </div>
+
+                                <div class="progress mt-4 mb-2" style="height: 12px;" aria-label="Budget distribution">
+                                    <div id="transportBar" class="progress-bar bg-success" style="width: 0%"></div>
+                                    <div id="accommodationBar" class="progress-bar bg-warning" style="width: 0%"></div>
+                                    <div id="foodBar" class="progress-bar bg-info" style="width: 0%"></div>
+                                    <div id="activitiesBar" class="progress-bar bg-danger" style="width: 0%"></div>
+                                </div>
+
+                                <div class="budget-legend d-flex flex-wrap gap-3 small mb-4">
+                                    <span><i class="bi bi-circle-fill text-success"></i> <span data-i18n="transport">Transportation</span></span>
+                                    <span><i class="bi bi-circle-fill text-warning"></i> <span data-i18n="accommodation">Accommodation</span></span>
+                                    <span><i class="bi bi-circle-fill text-info"></i> <span data-i18n="food">Food</span></span>
+                                    <span><i class="bi bi-circle-fill text-danger"></i> <span data-i18n="activities">Activities</span></span>
+                                </div>
+
+                                <div class="total-budget" aria-live="polite">
+
+                                    <p data-i18n="estimatedTotal">
+                                        Estimated Total Budget
+                                    </p>
+
+                                    <h2 id="totalBudget">0 ₸</h2>
+
+                                    <p>
+                                        <span id="costPerPerson">0 ₸</span>
+                                        <span data-i18n="perPerson">per person</span>
+                                    </p>
+
+                                </div>
+
+                                <p class="small text-muted mt-3" data-i18n="budgetNote">
+                                    Prices are approximate and may vary depending on the season and travel preferences.
+                                </p>
+
+                                <button id="copyTrip" class="btn btn-outline-secondary w-100 mt-2" type="button">
+                                    <i class="bi bi-clipboard"></i>
+                                    <span data-i18n="copyTrip">Copy Trip Details</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="travel-tips mt-4">
+
+                            <h4>
+                                <i class="bi bi-lightbulb"></i>
+                                <span data-i18n="travelTips">Travel Tips</span>
+                            </h4>
+
+                            <ul>
+                                <li data-i18n="tip1">Check the weather before your journey.</li>
+                                <li data-i18n="tip2">Bring comfortable shoes and warm clothes.</li>
+                                <li data-i18n="tip3">Carry enough water when exploring nature.</li>
+                                <li data-i18n="tip4">Respect local traditions and protect the environment.</li>
+                                <li data-i18n="tip5">Download offline maps for remote areas.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section section-padding">
+            <div class="container">
+
+                <div class="section-heading text-center">
+
+                    <span class="section-label" data-i18n="yourAdventures">
+                        YOUR ADVENTURES
+                    </span>
+
+                    <h2 data-i18n="savedTrips">My Saved Trips</h2>
+
+                    <p data-i18n="savedTripsDescription">
+                        View and manage your personal travel plans.
+                    </p>
+
+                </div>
+
+                <div id="savedTripsList" class="row g-4"></div>
+
+                <div id="noSavedTrips" class="empty-state text-center py-5">
+
+                    <i class="bi bi-suitcase-lg"></i>
+
+                    <h3 data-i18n="noTripsTitle">No saved trips yet</h3>
+
+                    <p data-i18n="noTripsDescription">
+                        Create your first travel plan above.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-5">
+                    <a class="footer-brand" href="index.html">
+                        <i class="bi bi-compass"></i> Qazaq Trails
+                    </a>
+
+                    <p data-i18n="footerDescription">
+                        Your interactive travel guide to the beautiful landscapes and rich culture of Kazakhstan.
+                    </p>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <h5 data-i18n="quickLinks">Quick Links</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="home">Home</a></li>
+                        <li><a href="destinations.html" data-i18n="destinations">Destinations</a></li>
+                        <li><a href="planner.html" data-i18n="planner">Trip Planner</a></li>
+                        <li><a href="favorites.html" data-i18n="favorites">Favorites</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <h5 data-i18n="information">Information</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="about">About</a></li>
+                        <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+                    </ul>
+
+                    <p>
+                        <i class="bi bi-geo-alt"></i>
+                        <span data-i18n="location">Astana, Kazakhstan</span>
+                    </p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center footer-bottom">
+                <p>&copy; 2026 Qazaq Trails. <span data-i18n="rights">All rights reserved.</span></p>
+                <p data-i18n="studentProject">Final Project | Astana IT University</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" type="button" aria-label="Back to top" hidden>
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3" aria-live="polite"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/planner.js"></script>
+
+</body>
+</html>

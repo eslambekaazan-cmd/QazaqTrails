@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about Qazaq Trails, our mission and our team.">
+    <title>Qazaq Trails | About Us</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-compass"></i> Qazaq<span>Trails</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" data-i18n="home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html" data-i18n="destinations">Destinations</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="planner.html" data-i18n="planner">Trip Planner</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="favorites.html" data-i18n="favorites">Favorites</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html" aria-current="page" data-i18n="about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-i18n="contact">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav-controls d-flex align-items-center gap-3">
+
+                    <select id="languageSelect" class="form-select language-select" aria-label="Select language">
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                        <option value="kk">KZ</option>
+                    </select>
+
+                    <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle color theme" aria-pressed="false">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="page-hero about-hero">
+            <div class="container text-center">
+
+                <span class="hero-label" data-i18n="aboutLabel">
+                    GET TO KNOW US
+                </span>
+
+                <h1 data-i18n="aboutTitle">About Qazaq Trails</h1>
+
+                <p data-i18n="aboutDescription">
+                    Inspired by Kazakhstan. Created for travelers.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-6">
+                        <img src="images/about.jpg"
+                            class="img-fluid rounded-4 about-image"
+                            alt="Beautiful mountain landscape of Kazakhstan"
+                            loading="lazy">
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <span class="section-label" data-i18n="ourStory">
+                            OUR STORY
+                        </span>
+
+                        <h2 class="mb-4" data-i18n="storyTitle">
+                            Discover the Beauty of Our Homeland
+                        </h2>
+
+                        <p data-i18n="storyText1">
+                            Qazaq Trails is an interactive travel guide created by three students of Astana IT University. Our project helps people discover the beautiful landscapes, historical places and cultural heritage of Kazakhstan.
+                        </p>
+
+                        <p data-i18n="storyText2">
+                            Kazakhstan is a country of endless steppes, majestic mountains, crystal-clear lakes and modern cities. We believe that traveling is one of the best ways to explore its unique identity.
+                        </p>
+
+                        <p data-i18n="storyText3">
+                            Our website combines tourism and technology to make travel planning easier, more accessible and enjoyable for everyone.
+                        </p>
+
+                        <a href="destinations.html" class="btn btn-primary-custom mt-3">
+                            <i class="bi bi-compass"></i>
+                            <span data-i18n="exploreBtn">Explore Destinations</span>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section section-padding">
+            <div class="container">
+
+                <div class="section-heading text-center">
+
+                    <span class="section-label" data-i18n="ourPurpose">
+                        OUR PURPOSE
+                    </span>
+
+                    <h2 data-i18n="missionTitle">Our Mission and Values</h2>
+
+                    <p data-i18n="missionDescription">
+                        Connecting people with the beauty and culture of Kazakhstan.
+                    </p>
+
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                <i class="bi bi-globe-americas"></i>
+                            </div>
+
+                            <h3 data-i18n="valueTourism">Promote Tourism</h3>
+
+                            <p data-i18n="valueTourismText">
+                                Introduce local and international travelers to Kazakhstan's destinations.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                <i class="bi bi-tree"></i>
+                            </div>
+
+                            <h3 data-i18n="valueNature">Protect Nature</h3>
+
+                            <p data-i18n="valueNatureText">
+                                Encourage responsible travel and respect for the environment.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                <i class="bi bi-book"></i>
+                            </div>
+
+                            <h3 data-i18n="valueCulture">Share Culture</h3>
+
+                            <p data-i18n="valueCultureText">
+                                Help travelers discover Kazakh traditions, history and cultural heritage.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+
+                            <h3 data-i18n="valueTechnology">Use Technology</h3>
+
+                            <p data-i18n="valueTechnologyText">
+                                Make travel planning simple through modern and interactive web technology.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="team">
+            <div class="container">
+
+                <div class="section-heading text-center">
+
+                    <span class="section-label" data-i18n="teamLabel">
+                        THE PEOPLE BEHIND THE PROJECT
+                    </span>
+
+                    <h2 data-i18n="teamTitle">Meet Our Team</h2>
+
+                    <p data-i18n="teamDescription">
+                        Three students, one shared passion for technology and travel.
+                    </p>
+
+                </div>
+
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="team-card text-center">
+
+                            <div class="team-avatar">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+
+                            <h3>Yeslambek Ayazhan</h3>
+
+                            <p class="team-role" data-i18n="role1">
+                                Website Design &amp; User Interface
+                            </p>
+
+                            <p data-i18n="role1Description">
+                                Responsible for the home page, about page, website design, responsive layout and language switching.
+                            </p>
+
+                            <div class="team-skills">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Bootstrap</span>
+                                <span>Localization</span>
+                            </div>
+
+                            <hr>
+
+                            <p class="small mt-3 mb-0">
+                                <code class="text-reset">index.html</code><br>
+                                <code class="text-reset">about.html</code><br>
+                                <code class="text-reset">css/style.css</code><br>
+                                <code class="text-reset">css/responsive.css</code><br>
+                                <code class="text-reset">js/translations.js</code>
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="team-card text-center">
+
+                            <div class="team-avatar">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+
+                            <h3>Argyn Temirbekov</h3>
+
+                            <p class="team-role" data-i18n="role2">
+                                Destinations &amp; Data Management
+                            </p>
+
+                            <p data-i18n="role2Description">
+                                Responsible for the destination catalog, search, filtering, sorting, favorites and loading data from JSON.
+                            </p>
+
+                            <div class="team-skills">
+                                <span>HTML</span>
+                                <span>JavaScript</span>
+                                <span>jQuery</span>
+                                <span>JSON</span>
+                            </div>
+
+                            <hr>
+
+                            <p class="small mt-3 mb-0">
+                                <code class="text-reset">destinations.html</code><br>
+                                <code class="text-reset">favorites.html</code><br>
+                                <code class="text-reset">js/destinations.js</code><br>
+                                <code class="text-reset">js/favorites.js</code><br>
+                                <code class="text-reset">data/destinations.json</code>
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="team-card text-center">
+
+                            <div class="team-avatar">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+
+                            <h3>Darkhan Tynyshtyk</h3>
+
+                            <p class="team-role" data-i18n="role3">
+                                Trip Planner &amp; Interactive Features
+                            </p>
+
+                            <p data-i18n="role3Description">
+                                Responsible for trip planning, budget calculation, saved trips, feedback, dark mode and notifications.
+                            </p>
+
+                            <div class="team-skills">
+                                <span>HTML</span>
+                                <span>JavaScript</span>
+                                <span>jQuery</span>
+                                <span>localStorage</span>
+                            </div>
+
+                            <hr>
+
+                            <p class="small mt-3 mb-0">
+                                <code class="text-reset">planner.html</code><br>
+                                <code class="text-reset">contact.html</code><br>
+                                <code class="text-reset">js/planner.js</code><br>
+                                <code class="text-reset">js/main.js</code>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="features-section section-padding">
+            <div class="container">
+
+                <div class="section-heading text-center">
+
+                    <span class="section-label" data-i18n="technologyLabel">
+                        BEHIND THE WEBSITE
+                    </span>
+
+                    <h2 data-i18n="technologyTitle">
+                        Technologies We Used
+                    </h2>
+
+                    <p data-i18n="technologyDescription">
+                        Our project was built using the technologies learned during our web development course.
+                    </p>
+
+                </div>
+
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="technology-card text-center">
+                            <i class="bi bi-filetype-html" style="color: #E34F26;"></i>
+                            <h5>HTML5</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="technology-card text-center">
+                            <i class="bi bi-filetype-css" style="color: #1572B6;"></i>
+                            <h5>CSS3</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="technology-card text-center">
+                            <i class="bi bi-bootstrap-fill" style="color: #7952B3;"></i>
+                            <h5>Bootstrap</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="technology-card text-center">
+                            <i class="bi bi-filetype-js" style="color: #D6B400;"></i>
+                            <h5>JavaScript</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="technology-card text-center">
+                            <i class="bi bi-code-slash" style="color: #0769AD;"></i>
+                            <h5>jQuery</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="technology-card text-center">
+                            <i class="bi bi-filetype-json" style="color: #477B63;"></i>
+                            <h5>JSON</h5>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+
+                <div class="section-heading text-center">
+
+                    <span class="section-label" data-i18n="faqLabel">
+                        NEED HELP?
+                    </span>
+
+                    <h2 data-i18n="faqTitle">
+                        Frequently Asked Questions
+                    </h2>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+
+                        <div class="accordion" id="faqAccordion">
+
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faqOne"
+                                        aria-expanded="true"
+                                        aria-controls="faqOne"
+                                        data-i18n="faqQuestion1">
+                                        What is Qazaq Trails?
+                                    </button>
+                                </h3>
+
+                                <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body" data-i18n="faqAnswer1">
+                                        Qazaq Trails is a free interactive travel guide that helps users discover destinations in Kazakhstan, save favorite places and plan their trips.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faqTwo"
+                                        aria-expanded="false"
+                                        aria-controls="faqTwo"
+                                        data-i18n="faqQuestion2">
+                                        Is Qazaq Trails free to use?
+                                    </button>
+                                </h3>
+
+                                <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body" data-i18n="faqAnswer2">
+                                        Yes! All features, including the destination catalog, trip planner and favorites, are completely free.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faqThree"
+                                        aria-expanded="false"
+                                        aria-controls="faqThree"
+                                        data-i18n="faqQuestion3">
+                                        Do I need to create an account?
+                                    </button>
+                                </h3>
+
+                                <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body" data-i18n="faqAnswer3">
+                                        No. Your favorites, saved trips and preferences are stored locally in your browser using localStorage.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faqFour"
+                                        aria-expanded="false"
+                                        aria-controls="faqFour"
+                                        data-i18n="faqQuestion4">
+                                        Are the travel prices exact?
+                                    </button>
+                                </h3>
+
+                                <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body" data-i18n="faqAnswer4">
+                                        No. All prices are approximate estimates for educational and travel planning purposes. Actual costs may vary.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faqFive"
+                                        aria-expanded="false"
+                                        aria-controls="faqFive"
+                                        data-i18n="faqQuestion5">
+                                        What languages are available?
+                                    </button>
+                                </h3>
+
+                                <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body" data-i18n="faqAnswer5">
+                                        Qazaq Trails supports English, Kazakh and Russian. You can change your preferred language using the navigation menu.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faqSix"
+                                        aria-expanded="false"
+                                        aria-controls="faqSix"
+                                        data-i18n="faqQuestion6">
+                                        Can I book hotels or tickets directly?
+                                    </button>
+                                </h3>
+
+                                <div id="faqSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body" data-i18n="faqAnswer6">
+                                        Qazaq Trails is a travel guide and planning tool. It does not process real bookings or payments.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cta-section section-padding">
+            <div class="container text-center">
+
+                <h2 data-i18n="aboutCtaTitle">
+                    Have Questions or Suggestions?
+                </h2>
+
+                <p data-i18n="aboutCtaDescription">
+                    We would love to hear your ideas and feedback about Qazaq Trails.
+                </p>
+
+                <a href="contact.html" class="btn btn-primary-custom">
+                    <i class="bi bi-envelope"></i>
+                    <span data-i18n="contactUs">Contact Us</span>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-5">
+
+                    <a class="footer-brand" href="index.html">
+                        <i class="bi bi-compass"></i> Qazaq Trails
+                    </a>
+
+                    <p data-i18n="footerDescription">
+                        Your interactive travel guide to the beautiful landscapes and rich culture of Kazakhstan.
+                    </p>
+
+                </div>
+
+                <div class="col-6 col-lg-3">
+
+                    <h5 data-i18n="quickLinks">Quick Links</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="home">Home</a></li>
+                        <li><a href="destinations.html" data-i18n="destinations">Destinations</a></li>
+                        <li><a href="planner.html" data-i18n="planner">Trip Planner</a></li>
+                        <li><a href="favorites.html" data-i18n="favorites">Favorites</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-6 col-lg-4">
+
+                    <h5 data-i18n="information">Information</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="about">About</a></li>
+                        <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+                    </ul>
+
+                    <p>
+                        <i class="bi bi-geo-alt"></i>
+                        <span data-i18n="location">Astana, Kazakhstan</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center footer-bottom">
+
+                <p>
+                    &copy; 2026 Qazaq Trails.
+                    <span data-i18n="rights">All rights reserved.</span>
+                </p>
+
+                <p data-i18n="studentProject">
+                    Final Project | Astana IT University
+                </p>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <button id="backToTop" type="button" aria-label="Back to top" hidden>
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3" aria-live="polite"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Save and explore your favorite destinations in Kazakhstan.">
+    <title>Qazaq Trails | Favorites</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-compass"></i> Qazaq<span>Trails</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" data-i18n="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html" data-i18n="destinations">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="planner.html" data-i18n="planner">Trip Planner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="favorites.html" aria-current="page" data-i18n="favorites">Favorites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-i18n="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-i18n="contact">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav-controls d-flex align-items-center gap-3">
+                    <select id="languageSelect" class="form-select language-select" aria-label="Select language">
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                        <option value="kk">KZ</option>
+                    </select>
+
+                    <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle color theme" aria-pressed="false">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="page-hero favorites-hero">
+            <div class="container text-center">
+
+                <span class="hero-label" data-i18n="favoritesLabel">
+                    KEEP YOUR DREAM DESTINATIONS
+                </span>
+
+                <h1 data-i18n="favoritesTitle">My Favorite Places</h1>
+
+                <p data-i18n="favoritesDescription">
+                    All the places you love, saved in one collection. Your next adventure starts here.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+
+                <div class="row g-4 mb-5">
+
+                    <div class="col-md-4">
+                        <div class="favorite-stat text-center">
+                            <i class="bi bi-heart-fill"></i>
+
+                            <h2 id="totalFavorites">0</h2>
+
+                            <p data-i18n="savedPlaces">Saved Places</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="favorite-stat text-center">
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            <h2 id="favoriteRegions">0</h2>
+
+                            <p data-i18n="regions">Regions</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="favorite-stat text-center">
+                            <i class="bi bi-wallet2"></i>
+
+                            <h2 id="favoriteBudget">0 ₸</h2>
+
+                            <p data-i18n="favoriteBudgetLabel">Combined Daily Cost</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="filter-panel mb-4">
+
+                    <div class="row g-3 align-items-end">
+
+                        <div class="col-md-6">
+
+                            <label for="favoriteSearch" class="form-label" data-i18n="search">
+                                Search
+                            </label>
+
+                            <div class="input-group">
+
+                                <span class="input-group-text">
+                                    <i class="bi bi-search"></i>
+                                </span>
+
+                                <input type="search"
+                                    id="favoriteSearch"
+                                    class="form-control"
+                                    placeholder="Search your favorites..."
+                                    data-i18n-placeholder="favoriteSearchPlaceholder">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <label for="favoriteSort" class="form-label" data-i18n="sortBy">
+                                Sort by
+                            </label>
+
+                            <select id="favoriteSort" class="form-select">
+
+                                <option value="recent" data-i18n="recentlyAdded">
+                                    Recently added
+                                </option>
+
+                                <option value="name" data-i18n="nameAZ">
+                                    Name A-Z
+                                </option>
+
+                                <option value="price-low" data-i18n="priceLow">
+                                    Lowest price
+                                </option>
+
+                                <option value="price-high" data-i18n="priceHigh">
+                                    Highest price
+                                </option>
+
+                                <option value="popular" data-i18n="mostPopular">
+                                    Most popular
+                                </option>
+
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <button id="clearFavorites" type="button"
+                                class="btn btn-outline-danger w-100"
+                                data-bs-toggle="modal"
+                                data-bs-target="#clearFavoritesModal"
+                                disabled>
+
+                                <i class="bi bi-trash3"></i>
+                                <span data-i18n="clearAll">Clear All</span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+
+                    <p class="results-text mb-0" aria-live="polite">
+
+                        <span id="favoriteResultCount">0</span>
+
+                        <span data-i18n="savedDestinations">
+                            saved destinations
+                        </span>
+
+                    </p>
+
+                    <button id="planFavorites" class="btn btn-primary-custom" type="button" disabled>
+
+                        <i class="bi bi-map"></i>
+
+                        <span data-i18n="planWithFavorites">
+                            Plan Trip with Favorites
+                        </span>
+
+                    </button>
+
+                </div>
+
+                <div id="loading" class="text-center py-5" role="status" hidden>
+
+                    <div class="spinner-border text-success"></div>
+
+                    <p class="mt-3" data-i18n="loading">
+                        Loading destinations...
+                    </p>
+
+                </div>
+
+                <div id="favoritesList" class="row g-4"></div>
+
+                <div id="emptyFavorites" class="empty-state text-center py-5" hidden>
+
+                    <i class="bi bi-heart"></i>
+
+                    <h2 data-i18n="emptyFavoritesTitle">
+                        No Favorites Yet
+                    </h2>
+
+                    <p data-i18n="emptyFavoritesDescription">
+                        Explore Kazakhstan and save the destinations you would love to visit.
+                    </p>
+
+                    <a href="destinations.html" class="btn btn-primary-custom">
+
+                        <i class="bi bi-compass"></i>
+
+                        <span data-i18n="exploreBtn">
+                            Explore Destinations
+                        </span>
+
+                    </a>
+
+                </div>
+
+                <div id="noFavoriteResults" class="empty-state text-center py-5" hidden>
+
+                    <i class="bi bi-search"></i>
+
+                    <h3 data-i18n="noResultsTitle">
+                        No destinations found
+                    </h3>
+
+                    <p data-i18n="favoriteNoResultsDescription">
+                        Try searching for a different destination.
+                    </p>
+
+                    <button id="clearFavoriteSearch" type="button" class="btn btn-primary-custom" data-i18n="clearSearch">
+                        Clear Search
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="features-section section-padding">
+            <div class="container">
+
+                <div class="section-heading text-center">
+
+                    <span class="section-label" data-i18n="discoverMore">
+                        DISCOVER MORE
+                    </span>
+
+                    <h2 data-i18n="recommendedTitle">
+                        You May Also Like
+                    </h2>
+
+                    <p data-i18n="recommendedDescription">
+                        Find more amazing places to add to your travel collection.
+                    </p>
+
+                </div>
+
+                <div id="recommendedDestinations" class="row g-4"></div>
+
+                <div class="text-center mt-5">
+
+                    <a href="destinations.html" class="btn btn-primary-custom">
+
+                        <span data-i18n="viewAll">
+                            View All Destinations
+                        </span>
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <div class="modal fade" id="clearFavoritesModal" tabindex="-1" aria-labelledby="clearFavoritesTitle" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="clearFavoritesTitle" data-i18n="clearFavoritesTitle">
+                        Clear All Favorites?
+                    </h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+
+                <div class="modal-body text-center py-4">
+
+                    <i class="bi bi-exclamation-circle text-danger display-4"></i>
+
+                    <p class="mt-3" data-i18n="clearFavoritesMessage">
+                        Are you sure you want to remove all your saved destinations? This action cannot be undone.
+                    </p>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="cancel">
+                        Cancel
+                    </button>
+
+                    <button type="button" id="confirmClearFavorites" class="btn btn-danger" data-bs-dismiss="modal">
+
+                        <i class="bi bi-trash3"></i>
+
+                        <span data-i18n="clearAll">Clear All</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-5">
+
+                    <a class="footer-brand" href="index.html">
+                        <i class="bi bi-compass"></i> Qazaq Trails
+                    </a>
+
+                    <p data-i18n="footerDescription">
+                        Your interactive travel guide to the beautiful landscapes and rich culture of Kazakhstan.
+                    </p>
+
+                </div>
+
+                <div class="col-6 col-lg-3">
+
+                    <h5 data-i18n="quickLinks">Quick Links</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="home">Home</a></li>
+                        <li><a href="destinations.html" data-i18n="destinations">Destinations</a></li>
+                        <li><a href="planner.html" data-i18n="planner">Trip Planner</a></li>
+                        <li><a href="favorites.html" data-i18n="favorites">Favorites</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-6 col-lg-4">
+
+                    <h5 data-i18n="information">Information</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="about">About</a></li>
+                        <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+                    </ul>
+
+                    <p>
+                        <i class="bi bi-geo-alt"></i>
+                        <span data-i18n="location">Astana, Kazakhstan</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center footer-bottom">
+
+                <p>
+                    &copy; 2026 Qazaq Trails.
+                    <span data-i18n="rights">All rights reserved.</span>
+                </p>
+
+                <p data-i18n="studentProject">
+                    Final Project | Astana IT University
+                </p>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <button id="backToTop" type="button" aria-label="Back to top" hidden>
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3" aria-live="polite"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/favorites.js"></script>
+
+</body>
+</html>
